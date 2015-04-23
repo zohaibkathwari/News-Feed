@@ -1,6 +1,6 @@
 #News-Feed App
 
-A responsive page working on >ie8 and a desktop, high-resolution Laptops, Mobile 
+A responsive Application working on >ie8 and a desktop, high-resolution Laptops, Mobile 
 
 #To Run The App please follow the instructions
 
