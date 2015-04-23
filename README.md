@@ -2,7 +2,7 @@
 
 A responsive page working on >ie8 and a desktop, high-resolution Laptops, Mobile 
 
-#To Run The Project please follow the instructions
+#To Run The App please follow the instructions
 
 Download the build(News-Feed.zip) from the GitHub : https://github.com/zohaibkathwari/News-Feed
 
