@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NewsFeed">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>NewsFeed&reg;</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/overide.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/angular/angular-csp.css">
+    <!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="page-container">
+
+        <!-- top navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle left" data-toggle="offcanvas" data-target=".sidebar-nav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Feeds</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" ng-controller="FeedsController">
+            <div class="row row-offcanvas row-offcanvas-left">
+
+                <!-- sidebar -->
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <!-- <div class="col-md-12 title-top-bar">
+                        <h1 class="text-center">Feeds</h1>
+                    </div>-->
+                    <ul class="nav" ng-repeat="item in data">
+                        <li ng-click="setSelected(item);" class="menu-wrapper">
+                                <div class="col-md-3 center-thumbnail-wrapper">
+                                    <img class="thumbnail" ng-src="{{item['media:thumbnail'][0]._url}}">
+                                </div>
+                                <div class="col-md-9 panel-wrapper">
+                                    <p class="panel-title text-nowrap title" ng-cloak>{{item.title}}</p>
+                                    <p class="text-nowrap description" ng-cloak>{{item.description}}</p>
+                                    <span class="glyphicon glyphicon-chevron-right chevron-right"></span>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main area -->
+                <div class="col-xs-12 col-sm-9">
+                    <!--<div class="col-md-12 title-top-bar">
+                        <h1 class="text-center">Feeds</h1>
+                    </div>-->
+                    <div ng-show="selected" >
+                        <div class="col-xs-12 col-sm-9 thumbnail-view-container">
+                            <h3 ng-cloak>{{selected.title}}</h3>
+                            <img class="thumbnail-view" ng-src="{{selected['media:thumbnail'][1]._url}}"></img>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <p class="description-view" ng-cloak>{{selected.description}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.col-xs-12 main -->
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.page-container-->
+    <!-- script references -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="js/xml2json.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/toggle.js"></script>
+</body>
+
+</html>
