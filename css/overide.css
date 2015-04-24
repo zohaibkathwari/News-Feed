@@ -18,13 +18,11 @@ body {
 }
 
 .navbar-brand {
-    display: inline-block;
     float: none;
     padding: 20px;
 }
 
 .navbar-toggle {
-    position: absolute;
     float: left;
     margin-left: 15px;
 }
@@ -64,18 +62,15 @@ body {
     }
 }
 
-@media (min-width: 1920px) {
-    .reload-icon-wrapper {
-        right: 139px !important;
-    }
-}
-
 .thumbnail {
     height: 50px;
-    position: absolute;
     left: 17px;
     top: 3px;
 }
+
+.thumbnail, .chevron-right, .text-container, .reload-icon-wrapper, .navbar-toggle {
+    position: absolute;
+} 
 
 .navmenu .reload-icon-wrapper {
     display: none;
@@ -85,7 +80,7 @@ body {
     float: left;
 }
 
-.menu-wrapper p {
+.menu-wrapper p, .minimized {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -96,7 +91,6 @@ body {
 }
 
 .chevron-right {
-    position: absolute;
     right: -16px;
     top: 10px;
     opacity: 0.5;
@@ -112,7 +106,6 @@ body {
 
 .menu-wrapper {
     height: 56px;
-    cursor: pointer;
     border-bottom: 1px solid #E6E6E6;
 }
 
@@ -124,7 +117,6 @@ body {
 .text-container {
     margin: 5px 0 5px 0;
     width: 60%;
-    position: absolute;
     right: 24px;
     top: 6px;
 }
@@ -147,27 +139,25 @@ body {
 }
 
 .reload-icon-wrapper {
-    position: absolute;
     top: 15px;
     right: 6px;
 }
 
  #reload-icon-wrapper {
     float: right;
-    display: inline-block;
 }
 
 .reload-icon {
     font-size: 2em;
     opacity: 0.7;
+}
+
+.reload-icon, .menu-wrapper {
     cursor: pointer;
 }
 
 .minimized {
     font-size: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .view-container {
@@ -179,13 +169,14 @@ body {
     height: 3.35em;
     line-height: 37px;
     padding: 10px 15px;
-    background-color: #E6E6E6;
 }
 
 .view-title-container h3 {
-    color: #000000;
     margin-top: 6px;
     font-size: 100%;
+}
+
+.view-title-container h3, .navbar-brand, #reload-icon-wrapper {
     display: inline-block;
 }
 
@@ -194,11 +185,11 @@ body {
     font-size: 20px;
 }
 
-.navbar-default {
+.navbar-default, .view-title-container {
     background-color: #E6E6E6;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand .view-title-container h3 {
       color: #000000;
 }
 
