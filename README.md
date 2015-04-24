@@ -1,8 +1,8 @@
 #News-Feed App
 
-A responsive Application working on >ie8 and a desktop, high-resolution Laptops, Mobile 
+A responsive Application tested on ie11, chrome, firefox, works on a desktop, high-resolution Laptops & on Mobile View. 
 
-#To Run The App please follow the instructions
+#To Run The App
 
 Download the build(News-Feed.zip) from the GitHub : https://github.com/zohaibkathwari/News-Feed
 
