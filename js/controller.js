@@ -6,7 +6,7 @@ newsFeed.controller("FeedsController", ["$scope", "$http", "DataFactory",
         "use strict";
         $scope.selected = null;
         $scope.setSelected = function (item) {
-            $scope.selected = item;    
+            $scope.selected = item;
         };
         var callback = function (jsonData) {
             console.log('JSON DATA:', jsonData);
