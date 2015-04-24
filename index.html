@@ -29,8 +29,8 @@
 
 <body>
     <div ng-controller="FeedsController">
-        <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" style="">
-            <a class="navmenu-brand visible-md visible-lg text-center" href="#">Feeds</a>
+        <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+            <a class="navmenu-brand visible-md visible-lg text-center ng-cloak" href="#">Feeds</a>
             <div class="reload-icon-wrapper">
                 <span class="glyphicon glyphicon-repeat reload-icon"></span>
             </div>
@@ -53,7 +53,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand minimized" href="#" ng-show="selected">{{selected.title}}</a>
+            <a class="navbar-brand minimized ng-cloak" href="#" ng-show="selected">{{selected.title}}</a>
             <div class="reload-icon-wrapper">
                 <span class="glyphicon glyphicon-repeat reload-icon"></span>
             </div>
