@@ -74,7 +74,7 @@
                             <p class="ng-cloak">{{selected.description}}</p>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9 iframe-container ng-cloak">
-                            <iframe ng-src="{{trustedURL}}">
+                            <iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" ng-src="{{trustedURL}}">
                                 <p>Your browser does not support iframes.</p>
                             </iframe>
                         </div>
